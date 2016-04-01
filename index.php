@@ -5,7 +5,7 @@
 	<body>
 <?php
 if(!$_POST){?>
-<form action="lista.php" method="post">
+<form action="proba.php" method="post">
  <p>Turno: <select name="turno">
 			<option value="1">Turno A</option>
 			<option value="2">Turno B</option>

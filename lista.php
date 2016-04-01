@@ -1,6 +1,8 @@
 <html>
 	<head>
 	<title>Lista de <?php echo $_POST['linha'];?></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
 	</head>
 	<body onload="">
 <script src="./js/jquery-1.12.2.js"> </script>		

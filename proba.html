@@ -1,0 +1,447 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head>
+    <title>Select Excluyentes</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript">
+</script>
+    <style type="text/css">
+.hidden { display: none; }
+    </style>
+    <script type="application/x-javascript">
+    $(function () {
+            function restrict_multiple(selector) {
+                // Aqui establece el valor actual en su alt
+                $(selector).each(function () {
+                    $(this).attr("alt", $(this).val());
+                })
+                // Disparador cuando cambia el select
+                $(selector).change(function () {
+                    // Eliminando el hidden del option
+                    $(selector + " option").removeClass("hidden");
+                    
+                    // Se usa el alt attr, como aun auxiliar para mantener el valor que esta activo
+                    $(this).attr("alt", $(this).val())
+                    
+                    // Creando un arreglo con las opciones seleccionadas
+                    var selected = new Array();
+                    
+                    // Cada opcion seleccionada se ingresa en el arreglo
+                    $(selector + " option:selected").each(function () {
+                        selected.push(this.value);
+                    })
+                    
+                    // Ocultando los seleccionados ya, para no verlos en los demas selects
+                    for (k in selected) {
+                        $(selector + "[alt!=" + selected[k] + "] option[value=" + selected[k] + "]").addClass("hidden")
+                    }
+                })
+                
+                // Disparador para que se mantenga actualizado todos los selects
+                $(selector).each(function () { $(this).trigger("change"); })
+            }
+            
+            restrict_multiple(".excluyent-select");
+        })
+    </script>
+</head>
+
+<body>
+    <div class="select">
+        <select name="participantes_1" id="participantes_1" class="excluyent-select">
+            <option value="">
+                Seleccionar
+            </option>
+
+            <option value="1">
+                Equipo Blanco - Escuela 1
+            </option>
+
+            <option value="2">
+                Equipo Rosado - Escuela 2
+            </option>
+
+            <option value="3">
+                Equipo Negro - Escuela 3
+            </option>
+
+            <option value="4">
+                Equipo Casirojo - Escuela 4
+            </option>
+
+            <option value="5">
+                Equipo Casiverde - Escuela 5
+            </option>
+
+            <option value="6">
+                Equipo Casiazul - Escuela 6
+            </option>
+
+            <option value="7">
+                Equipo Naranja - Escuela 7
+            </option>
+
+            <option value="8">
+                Equipo Morado - Escuela 8
+            </option>
+
+            <option value="9">
+                Equipo Amarillo - Escuela 9
+            </option>
+        </select>
+    </div>
+
+    <div class="select">
+        <select name="participantes_2" id="participantes_2" class="excluyent-select">
+            <option value="">
+                Seleccionar
+            </option>
+
+            <option value="1">
+                Equipo Blanco - Escuela 1
+            </option>
+
+            <option value="2">
+                Equipo Rosado - Escuela 2
+            </option>
+
+            <option value="3">
+                Equipo Negro - Escuela 3
+            </option>
+
+            <option value="4">
+                Equipo Casirojo - Escuela 4
+            </option>
+
+            <option value="5">
+                Equipo Casiverde - Escuela 5
+            </option>
+
+            <option value="6">
+                Equipo Casiazul - Escuela 6
+            </option>
+
+            <option value="7">
+                Equipo Naranja - Escuela 7
+            </option>
+
+            <option value="8">
+                Equipo Morado - Escuela 8
+            </option>
+
+            <option value="9">
+                Equipo Amarillo - Escuela 9
+            </option>
+        </select>
+    </div>
+
+    <div class="select">
+        <select name="participantes_3" id="participantes_3" class="excluyent-select">
+            <option value="">
+                Seleccionar
+            </option>
+
+            <option value="1">
+                Equipo Blanco - Escuela 1
+            </option>
+
+            <option value="2">
+                Equipo Rosado - Escuela 2
+            </option>
+
+            <option value="3">
+                Equipo Negro - Escuela 3
+            </option>
+
+            <option value="4">
+                Equipo Casirojo - Escuela 4
+            </option>
+
+            <option value="5">
+                Equipo Casiverde - Escuela 5
+            </option>
+
+            <option value="6">
+                Equipo Casiazul - Escuela 6
+            </option>
+
+            <option value="7">
+                Equipo Naranja - Escuela 7
+            </option>
+
+            <option value="8">
+                Equipo Morado - Escuela 8
+            </option>
+
+            <option value="9">
+                Equipo Amarillo - Escuela 9
+            </option>
+        </select>
+    </div>
+
+    <div class="select">
+        <select name="participantes_4" id="participantes_4" class="excluyent-select">
+            <option value="">
+                Seleccionar
+            </option>
+
+            <option value="1">
+                Equipo Blanco - Escuela 1
+            </option>
+
+            <option value="2">
+                Equipo Rosado - Escuela 2
+            </option>
+
+            <option value="3">
+                Equipo Negro - Escuela 3
+            </option>
+
+            <option value="4">
+                Equipo Casirojo - Escuela 4
+            </option>
+
+            <option value="5">
+                Equipo Casiverde - Escuela 5
+            </option>
+
+            <option value="6">
+                Equipo Casiazul - Escuela 6
+            </option>
+
+            <option value="7">
+                Equipo Naranja - Escuela 7
+            </option>
+
+            <option value="8">
+                Equipo Morado - Escuela 8
+            </option>
+
+            <option value="9">
+                Equipo Amarillo - Escuela 9
+            </option>
+        </select>
+    </div>
+
+    <div class="select">
+        <select name="participantes_5" id="participantes_5" class="excluyent-select">
+            <option value="">
+                Seleccionar
+            </option>
+
+            <option value="1">
+                Equipo Blanco - Escuela 1
+            </option>
+
+            <option value="2">
+                Equipo Rosado - Escuela 2
+            </option>
+
+            <option value="3">
+                Equipo Negro - Escuela 3
+            </option>
+
+            <option value="4">
+                Equipo Casirojo - Escuela 4
+            </option>
+
+            <option value="5">
+                Equipo Casiverde - Escuela 5
+            </option>
+
+            <option value="6">
+                Equipo Casiazul - Escuela 6
+            </option>
+
+            <option value="7">
+                Equipo Naranja - Escuela 7
+            </option>
+
+            <option value="8">
+                Equipo Morado - Escuela 8
+            </option>
+
+            <option value="9">
+                Equipo Amarillo - Escuela 9
+            </option>
+        </select>
+    </div>
+
+    <div class="select">
+        <select name="participantes_6" id="participantes_6" class="excluyent-select">
+            <option value="">
+                Seleccionar
+            </option>
+
+            <option value="1">
+                Equipo Blanco - Escuela 1
+            </option>
+
+            <option value="2">
+                Equipo Rosado - Escuela 2
+            </option>
+
+            <option value="3">
+                Equipo Negro - Escuela 3
+            </option>
+
+            <option value="4">
+                Equipo Casirojo - Escuela 4
+            </option>
+
+            <option value="5">
+                Equipo Casiverde - Escuela 5
+            </option>
+
+            <option value="6">
+                Equipo Casiazul - Escuela 6
+            </option>
+
+            <option value="7">
+                Equipo Naranja - Escuela 7
+            </option>
+
+            <option value="8">
+                Equipo Morado - Escuela 8
+            </option>
+
+            <option value="9">
+                Equipo Amarillo - Escuela 9
+            </option>
+        </select>
+    </div>
+
+    <div class="select">
+        <select name="participantes_7" id="participantes_7" class="excluyent-select">
+            <option value="">
+                Seleccionar
+            </option>
+
+            <option value="1">
+                Equipo Blanco - Escuela 1
+            </option>
+
+            <option value="2">
+                Equipo Rosado - Escuela 2
+            </option>
+
+            <option value="3">
+                Equipo Negro - Escuela 3
+            </option>
+
+            <option value="4">
+                Equipo Casirojo - Escuela 4
+            </option>
+
+            <option value="5">
+                Equipo Casiverde - Escuela 5
+            </option>
+
+            <option value="6">
+                Equipo Casiazul - Escuela 6
+            </option>
+
+            <option value="7">
+                Equipo Naranja - Escuela 7
+            </option>
+
+            <option value="8">
+                Equipo Morado - Escuela 8
+            </option>
+
+            <option value="9">
+                Equipo Amarillo - Escuela 9
+            </option>
+        </select>
+    </div>
+
+    <div class="select">
+        <select name="participantes_8" id="participantes_8" class="excluyent-select">
+            <option value="">
+                Seleccionar
+            </option>
+
+            <option value="1">
+                Equipo Blanco - Escuela 1
+            </option>
+
+            <option value="2">
+                Equipo Rosado - Escuela 2
+            </option>
+
+            <option value="3">
+                Equipo Negro - Escuela 3
+            </option>
+
+            <option value="4">
+                Equipo Casirojo - Escuela 4
+            </option>
+
+            <option value="5">
+                Equipo Casiverde - Escuela 5
+            </option>
+
+            <option value="6">
+                Equipo Casiazul - Escuela 6
+            </option>
+
+            <option value="7">
+                Equipo Naranja - Escuela 7
+            </option>
+
+            <option value="8">
+                Equipo Morado - Escuela 8
+            </option>
+
+            <option value="9">
+                Equipo Amarillo - Escuela 9
+            </option>
+        </select>
+    </div>
+
+    <div class="select">
+        <select name="participantes_9" id="participantes_9" class="excluyent-select">
+            <option value="">
+                Seleccionar
+            </option>
+
+            <option value="1">
+                Equipo Blanco - Escuela 1
+            </option>
+
+            <option value="2">
+                Equipo Rosado - Escuela 2
+            </option>
+
+            <option value="3">
+                Equipo Negro - Escuela 3
+            </option>
+
+            <option value="4">
+                Equipo Casirojo - Escuela 4
+            </option>
+
+            <option value="5">
+                Equipo Casiverde - Escuela 5
+            </option>
+
+            <option value="6">
+                Equipo Casiazul - Escuela 6
+            </option>
+
+            <option value="7">
+                Equipo Naranja - Escuela 7
+            </option>
+
+            <option value="8">
+                Equipo Morado - Escuela 8
+            </option>
+
+            <option value="9">
+                Equipo Amarillo - Escuela 9
+            </option>
+        </select>
+    </div>
+</body>
+</html>
